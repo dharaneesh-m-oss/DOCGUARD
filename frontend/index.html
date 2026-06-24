@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc-Schiender | Visionary Synthesis</title>
+    <meta name="description" content="Advanced document updation model powered by Vision-AI.">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="hero">
+            <h1>Doc-Schiender</h1>
+            <p>Visionary document updates. Intelligent side-view processing.</p>
+        </header>
+
+        <main class="main-card">
+            <div class="upload-grid">
+                <!-- Specification Upload -->
+                <div class="drop-zone" id="spec-zone">
+                    <div class="drop-zone-icon">📄</div>
+                    <div class="drop-zone-label">Drop Specification File</div>
+                    <div class="file-selected-name" id="spec-name"></div>
+                    <input type="file" id="spec-file" accept=".txt,.pdf">
+                </div>
+
+                <!-- Photo Upload -->
+                <div class="drop-zone" id="photo-zone">
+                    <div class="drop-zone-icon">📸</div>
+                    <div class="drop-zone-label">Drop Side-View Photo</div>
+                    <div class="file-selected-name" id="photo-name"></div>
+                    <input type="file" id="photo-file" accept="image/*">
+                </div>
+            </div>
+
+            <button class="btn-primary" id="process-btn" disabled>Synthesize Document</button>
+
+            <div class="status-container" id="status-panel">
+                <div id="loading-state">
+                    <div class="loading-dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <p class="result-msg">Analyzing vision data & updating document...</p>
+                </div>
+                
+                <div id="result-state" style="display: none;">
+                    <p class="result-msg" id="result-text"></p>
+                    <div style="text-align: center;">
+                        <a href="#" class="download-link" id="download-btn" target="_blank">Download Updated Doc</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
